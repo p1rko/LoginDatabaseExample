@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Login Database Example</title>
+    </head>
+    <body>
+        <h1>Login Database Example</h1>
+
+        {% if user %}
+            Hello {{ user.name }}
+        {% else %}
+            <form action="/login" method="POST">
+                <input type="text" name="name" placeholder="Your name">
+                <input type="text" name="email" placeholder="Your email">
+
+                <button type="submit">Login</button>
+            </form>
+        {% endif %}
+    </body>
+
+</html>
